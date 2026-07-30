@@ -1,0 +1,12 @@
+[app]
+name = "egress-demo"
+version = "1.0.0"
+description = "Shows the public egress IP as seen from the app (via WireGuard egress profile)"
+
+[runtime.container]
+image = "Dockerfile"
+port = 8080
+egress = "home"
+
+[routing]
+health_check = "/"
